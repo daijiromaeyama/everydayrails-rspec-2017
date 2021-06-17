@@ -5,26 +5,27 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '~> 5.1.1'
-gem 'sqlite3'
-gem 'puma', '~> 3.7'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
-gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.5'
+gem 'rails', '~> 6.1', '>= 6.1.3.2'
+gem 'sqlite3', '~> 1.4'
+gem 'puma', '~> 5.3', '>= 5.3.2'
+gem 'sass-rails', '~> 6.0'
+gem 'uglifier', '~> 4.2'
+gem 'coffee-rails', '~> 5.0'
+gem 'turbolinks', '~> 5.2', '>= 5.2.1'
+gem 'jbuilder', '~> 2.11', '>= 2.11.2'
+gem 'webpacker', '~> 5.4'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'capybara', '~> 2.13.0'
+  gem 'capybara', '~> 3.35', '>= 3.35.3'
   gem 'selenium-webdriver'
 end
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'web-console', '~> 4.1'
+  gem 'listen', '~> 3.5', '>= 3.5.1'
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen', '~> 2.0', '>= 2.0.1'
   gem 'faker', require: false # for sample data in development
 end
 
@@ -33,5 +34,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'devise'
-gem 'paperclip'
+gem 'paperclip', git: 'https://github.com/sd/paperclip', branch: 'remove-mimemagic'
 gem 'geocoder'
