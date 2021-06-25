@@ -17,8 +17,7 @@ gem 'webpacker', '~> 5.4'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'capybara', '~> 3.35', '>= 3.35.3'
-  gem 'selenium-webdriver'
+  gem 'rspec-rails', '~> 5.0.0'
 end
 
 group :development do
@@ -27,6 +26,12 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0', '>= 2.0.1'
   gem 'faker', require: false # for sample data in development
+  gem 'spring-commands-rspec'
+end
+
+group :test do
+  gem 'capybara', '~> 3.35', '>= 3.35.3'
+  gem 'selenium-webdriver'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
