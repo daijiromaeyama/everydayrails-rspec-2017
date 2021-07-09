@@ -33,6 +33,7 @@ end
 group :test do
   gem 'capybara', '~> 3.35', '>= 3.35.3'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
