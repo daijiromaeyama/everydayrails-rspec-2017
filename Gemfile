@@ -34,6 +34,8 @@ group :test do
   gem 'capybara', '~> 3.35', '>= 3.35.3'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
+  gem 'launchy'
+  gem 'webdrivers'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -43,3 +45,4 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'paperclip', git: 'https://github.com/sd/paperclip', branch: 'remove-mimemagic'
 gem 'geocoder'
+gem 'rexml'
