@@ -65,6 +65,7 @@ RSpec.configure do |config|
 
   # Devise のヘルパーメソッドをテスト内で使用する
   config.include RequestSpecHelper, type: :request
+  config.include Devise::Test::IntegrationHelpers, type: :feature
 end
 
 Shoulda::Matchers.configure do |config|
