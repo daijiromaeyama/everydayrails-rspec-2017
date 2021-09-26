@@ -34,3 +34,7 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# Paperclip によってアップロードされたファイルを無視する
+/public/system
+/spec/test_uploads

@@ -58,3 +58,7 @@ Rails.application.configure do
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
 end
+
+# テストでアップロードされたファイルが、開発環境でアップロードしたファイルの中に混在しないようにする
+Paperclip::Attachment.default_options[:path]
+  "#{Rails.root}/spec/test_uploads/:class/:id_partition/:styles.:extension"
